@@ -8,7 +8,11 @@ $app = new Silex\Application();
 
 $app['debug'] = true;
 
-// SQLite config
+/* SQLite config
+
+TODO: Add a users table to sqlite db
+*/
+
 $app->register(new Silex\Provider\DoctrineServiceProvider(), array(
     'db.options' => array(
         'driver'   => 'pdo_sqlite',
