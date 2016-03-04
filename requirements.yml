@@ -1,0 +1,7 @@
+- name: geerlingguy.nginx
+  src: geerlingguy.nginx
+  version: 1.5.1
+
+- name: geerlingguy.php
+  src: geerlingguy.php
+  version: 1.8.2
