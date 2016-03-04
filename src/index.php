@@ -8,6 +8,7 @@ $app = new Silex\Application();
 
 $app['debug'] = true;
 
+// SQLite config
 $app->register(new Silex\Provider\DoctrineServiceProvider(), array(
     'db.options' => array(
         'driver'   => 'pdo_sqlite',
@@ -15,12 +16,26 @@ $app->register(new Silex\Provider\DoctrineServiceProvider(), array(
     ),
 ));
 
+// Twig template engine config
 $app->register(new Silex\Provider\TwigServiceProvider(), array(
     'twig.path' => __DIR__.'/views',
 ));
 
 
-/* ------- micro-blog api --------- */
+/* ------- micro-blog api ---------
+
+All CRUD operations performed within our /api/ endpoints below
+
+TODO: Error checking - e.g. if try retrieve posts for a user_id that does
+      not exist, return an error message and an appropriate HTTP status code.
+
+      Implement /api/posts/new endpoint to add a new micro-blog post for a
+      given user.
+
+      Extra: Add new API endpoints for any extra features you can think of.
+
+      Extra: Improve on current API code where you see necessary
+*/
 
 $app->get('/api/posts', function() use($app) {
     $sql = "SELECT rowid, * FROM posts";
@@ -48,7 +63,16 @@ $app->post('/api/posts/new', function (Request $request) {
 });
 
 
-/* ------- micro-blog web app --------- */
+
+/* ------- micro-blog web app ---------
+
+All Endpoints for micro-blog web app below.
+
+TODO: Build front-end of web app in the / endpoint below - Add more
+      endpoints if you like.
+
+      See TODO in index.twig for more instructions / suggestions
+*/
 
 $app->get('/', function() use($app) {
   return $app['twig']->render('index.twig');
