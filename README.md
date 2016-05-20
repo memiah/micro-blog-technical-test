@@ -1,4 +1,4 @@
-# Micro-blog Technical test
+# Micro-blog Technical Test
 
 ## About
 
