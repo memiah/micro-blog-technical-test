@@ -16,3 +16,7 @@
     roles:
       - geerlingguy.nginx
       - geerlingguy.php
+
+    post_tasks:
+      - name: Install PHP dependencies with composer
+        shell: cd /sites && php composer.phar install

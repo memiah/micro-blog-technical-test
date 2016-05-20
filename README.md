@@ -52,4 +52,4 @@ vagrant up
 ### Nginx
 
 * visit 192.168.100.102 for Nginx test page
-* visit any of the URL's listed above in the provides section
+* visit http://micro-blog.dev/api/posts to verify the micro-blog is configured correctly
