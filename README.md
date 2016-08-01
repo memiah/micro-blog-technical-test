@@ -39,6 +39,9 @@ sudo ansible-galaxy install -r requirements.yml --ignore-errors
 192.168.100.120 micro-blog.dev
 ```
 
+If you are having issues with Ansible / Vagrant or would prefer to use your own web server please refer to the link below on how to configure Silex:
+http://silex.sensiolabs.org/doc/master/web_servers.html
+
 ## Usage
 
 ### Dev
