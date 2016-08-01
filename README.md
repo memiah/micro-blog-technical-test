@@ -30,7 +30,7 @@ List of project specific system requirements.
 
 Run the following command to update your ansible galaxy roles (sudo if necessary):
 ```
-ansible-galaxy install -r requirements.yml --ignore-errors
+sudo ansible-galaxy install -r requirements.yml --ignore-errors
 ```
 
 ### Add following line to your host machine /etc/hosts:
