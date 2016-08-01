@@ -51,5 +51,5 @@ vagrant up
 
 ### Nginx
 
-* visit 192.168.100.102 for Nginx test page
+* visit 192.168.100.120 for Nginx test page
 * visit http://micro-blog.dev/api/posts to verify the micro-blog is configured correctly
