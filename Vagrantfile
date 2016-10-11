@@ -8,7 +8,7 @@ Vagrant.configure(2) do |config|
     vb.linked_clone = true
   end
 
-  config.vm.synced_folder ".", "/sites"
+  config.vm.synced_folder ".", "/sites", create: true, mount_options: ['dmode=0777', 'fmode=0776']
   
   config.ssh.forward_agent = true
 
